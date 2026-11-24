@@ -18,41 +18,27 @@ const OVAL_CX = 722; // horizontal center of the oval
 const OVAL_CY = 1065; // vertical center of the oval
 const STRIP_START = 2194; // where the flat ivory strip at the bottom begins
 
-/** Website background color: the bottom of the image fades into this */
-const PAGE_BG = "#f2ebe1";
-
 /**
- * BOTTOM FADE (in % of the image height)
- * The image is fully visible down to FADE_START, then melts into the page
- * background and is completely gone at FADE_END. The oval (it ends at about
- * 71%) is never touched. Only the bottom of the image fades.
+ * No fade at the bottom: the image is shown fully, edge to edge, so the next
+ * section's background connects directly to it with no white band.
  */
-const FADE_START = 74;
-const FADE_END = 92;
-
-const bottomFade = `linear-gradient(to bottom, #000 0%, #000 ${FADE_START}%, transparent ${FADE_END}%)`;
 
 export function HeroSection({ start }: { start: boolean }) {
   return (
     <section
       className="relative w-full overflow-hidden"
-      style={{ backgroundColor: PAGE_BG }}
     >
       {/* Image + everything on it share one box, so positions stay exact */}
       <div
         className="relative mx-auto w-full max-w-[560px]"
         style={{ containerType: "inline-size" }}
       >
-        {/* Background image: full clarity, only the bottom edge fades out */}
+        {/* Background image: full clarity, no fade */}
         <img
           src={floralBackground}
           alt=""
           draggable={false}
           className="pointer-events-none block h-auto w-full select-none"
-          style={{
-            WebkitMaskImage: bottomFade,
-            maskImage: bottomFade,
-          }}
         />
 
         {/* Title block: centered inside the oval */}
@@ -147,19 +133,22 @@ export function HeroSection({ start }: { start: boolean }) {
           </div>
         </motion.div>
 
-        {/* Scroll hint: sits in the faded area at the bottom of the image */}
+        {/* Scroll hint: light text with a soft shadow, readable over the painting */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: start ? 1 : 0 }}
           transition={{ duration: 1, delay: 0.9 }}
           className="absolute inset-x-0 flex flex-col items-center"
           style={{
-            top: `${((STRIP_START + 90) / IMG_H) * 100}%`,
+            top: `${((STRIP_START - 40) / IMG_H) * 100}%`,
           }}
         >
           <p
-            className="font-medium uppercase tracking-[0.28em] text-[#3f4a2c]"
-            style={{ fontSize: "max(8px, 2cqw)" }}
+            className="font-medium uppercase tracking-[0.28em] text-[#fff8f0]"
+            style={{
+              fontSize: "max(8px, 2cqw)",
+              textShadow: "0 1px 4px rgba(0,0,0,0.75), 0 2px 10px rgba(0,0,0,0.45)",
+            }}
           >
             Scroll to discover
           </p>
@@ -167,8 +156,9 @@ export function HeroSection({ start }: { start: boolean }) {
           <motion.svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="text-[#7a5a14]"
+            className="text-[#fff3d6]"
             style={{
+              filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.7))",
               width: "max(14px, 4cqw)",
               height: "max(14px, 4cqw)",
               marginTop: "1cqw",

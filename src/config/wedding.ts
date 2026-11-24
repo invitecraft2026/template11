@@ -1,11 +1,9 @@
 /**
  * CENTRAL WEDDING CONFIGURATION
- * InviteCraft demo template featuring Vijay Deverakonda & Rashmika Mandanna.
- *
- * IMPORTANT:
- * This is a fictional/template preview, not an announcement or confirmation
- * of a real wedding. Replace the sample date, venue, event details, and copy
- * with confirmed details before using this configuration for a real event.
+ * Every editable detail of the invitation lives here.
+ * Sample wedding details for Anjana & Rohan (a fictional couple,
+ * traditional Malayali wedding on the Alappuzha backwaters, Kerala).
+ * Replace the values below with the real wedding details.
  */
 
 export type WeddingEvent = {
@@ -19,155 +17,153 @@ export type WeddingEvent = {
 
 export const wedding = {
   bride: {
-    firstName: "Rashmika",
-    fullName: "Rashmika Mandanna",
-    parents: "With the love and blessings of her family",
+    firstName: "Anjana",
+    fullName: "Anjana Menon",
+    parents: "Daughter of Mr. Gopinath Menon & Mrs. Sreedevi Menon",
   },
 
   groom: {
-    firstName: "Vijay",
-    fullName: "Vijay Deverakonda",
-    parents: "With the love and blessings of his family",
+    firstName: "Rohan",
+    fullName: "Rohan Pillai",
+    parents: "Son of Mr. Raghavan Pillai & Mrs. Lekha Pillai",
   },
 
-  initials: "V & R",
+  initials: "A & R",
 
-  /** SAMPLE DEMO DATE — replace with a confirmed date */
-  date: "Saturday, 20 November 2027",
+  /** Human readable date + time */
+  date: "Sunday, 17 January 2027",
 
-  dayName: "Saturday",
-  dayNumber: "20",
-  monthName: "November",
+  dayName: "Sunday",
+  dayNumber: "17",
+  monthName: "January",
   year: "2027",
 
-  time: "5:00 PM onwards",
+  time: "10:30 AM onwards",
 
-  /** Used by countdown + calendar; sample demo date */
-  dateISO: "2027-11-20T17:00:00",
-  endISO: "2027-11-20T23:00:00",
+  /** Used by countdown + calendar */
+  dateISO: "2027-01-17T10:30:00",
+  endISO: "2027-01-17T21:30:00",
 
-  welcomeLine: "Together with the love and blessings of our families",
+  welcomeLine: "With the blessings of our families",
 
-  welcomeTitle: "A Beautiful Beginning",
+  welcomeTitle: "Wedding Celebration",
 
-  welcomeJoin: "and",
+  welcomeJoin: "between",
 
-  /** SAMPLE VENUE — replace with a confirmed venue */
   venue: {
-    name: "The Royal Garden Palace",
-    address: "Sample Venue Address, Hyderabad, Telangana, India",
-    mapsQuery: "Sample wedding venue, Hyderabad, Telangana, India",
+    name: "Kayal Tharavad Resort",
+    address: "Punnamada Backwaters, Alappuzha, Kerala 688013",
+    mapsQuery: "Punnamada Backwaters, Alappuzha, Kerala",
   },
 
   events: [
     {
       id: "welcome",
-      title: "Welcome Celebration",
-      date: "Friday, 19 November 2027",
-      time: "6:30 PM",
-      venue: "The Royal Garden Palace, Celebration Lawn",
+      title: "Mehendi & Haldi",
+      date: "Saturday, 16 January 2027",
+      time: "5:00 PM",
+      venue: "Kayal Tharavad Resort, Lakeside Lawn",
       icon: "lantern",
     },
 
     {
       id: "ceremony",
-      title: "Wedding Ceremony",
-      date: "Saturday, 20 November 2027",
-      time: "5:00 PM",
-      venue: "The Royal Garden Palace, Garden Pavilion",
+      title: "Wedding Muhurtham",
+      date: "Sunday, 17 January 2027",
+      time: "10:30 AM",
+      venue: "Kayal Tharavad Resort, Nalukettu Mandapam",
       icon: "crescent",
     },
 
     {
       id: "reception",
-      title: "Wedding Reception",
-      date: "Saturday, 20 November 2027",
-      time: "7:00 PM",
-      venue: "The Royal Garden Palace, Grand Ballroom",
-      icon: "rings",
+      title: "Wedding Sadya",
+      date: "Sunday, 17 January 2027",
+      time: "12:30 PM",
+      venue: "Kayal Tharavad Resort, Banana-Leaf Hall",
+      icon: "dinner",
     },
 
     {
       id: "brunch",
-      title: "Family Brunch",
-      date: "Sunday, 21 November 2027",
-      time: "10:30 AM",
-      venue: "The Royal Garden Palace, Garden Terrace",
-      icon: "dinner",
+      title: "Evening Reception",
+      date: "Sunday, 17 January 2027",
+      time: "6:30 PM",
+      venue: "Kayal Tharavad Resort, Sunset Deck",
+      icon: "rings",
     },
   ] satisfies WeddingEvent[],
 
   dressCode: {
     description:
-      "Celebrate this love-story-inspired demo in elegant Indian festive wear, with rich burgundy, warm ivory, champagne gold, and soft floral tones.",
+      "Join us in traditional Kerala attire. Kasavu sarees and set-mundus in cream and gold, with touches of hibiscus red, backwater teal, and banana-leaf green, are warmly encouraged. Men are welcome in a mundu with a shirt or kurta.",
 
     colors: [
       {
-        name: "Ivory",
-        hex: "#F5F0E6",
+        name: "Kasavu Cream",
+        hex: "#F5EBD8",
       },
       {
-        name: "Champagne Gold",
-        hex: "#D6BC8B",
+        name: "Temple Gold",
+        hex: "#C9A24B",
       },
       {
-        name: "Dusty Rose",
-        hex: "#C98F91",
+        name: "Hibiscus Red",
+        hex: "#C8283A",
       },
       {
-        name: "Sage Green",
-        hex: "#A3AD91",
+        name: "Backwater Teal",
+        hex: "#1F8A82",
       },
       {
-        name: "Mocha Brown",
-        hex: "#8A7163",
+        name: "Banana Leaf",
+        hex: "#5E8C45",
       },
       {
-        name: "Misty Blue",
-        hex: "#A9BBCD",
+        name: "Sunset Coral",
+        hex: "#F0866A",
       },
       {
-        name: "Burgundy",
-        hex: "#783F4D",
+        name: "Jasmine White",
+        hex: "#FBF8F1",
       },
     ],
   },
 
   invitationMessage:
-    "Two hearts, two journeys, and a beautiful story imagined in celebration of love. With the warmth and blessings of our families, join us for this special invitation-template preview featuring Rashmika and Vijay. This is a demo design; event details are placeholders.",
+    "With the grace of the Almighty and the blessings of our elders, we joyfully invite you to celebrate the wedding of Anjana and Rohan amid the calm beauty of the Kerala backwaters. Join us as two families come together in love, laughter, and tradition. Your presence and good wishes will make our celebration truly complete.",
 
-  quote:
-    "“Every great love story begins with a beautiful moment.”",
+  quote: "“Where there is love, there is home.”",
 
   guestInformation: [
     {
       title: "Arrival",
-      body: "For this demo, guests are invited to arrive 20–30 minutes before the ceremony.",
+      body: "Please arrive 20–30 minutes before the muhurtham so you can settle in and be present for the rituals from the beginning.",
     },
 
     {
       title: "Dress Code",
-      body: "Festive Indian attire or elegant formal wear in ivory, champagne, burgundy, dusty rose, or other complementary tones is suggested for this demo.",
+      body: "Traditional Kerala attire in cream, gold, and festive tones is encouraged. Mornings by the backwaters are warm, so light cotton and silk are comfortable choices.",
     },
 
     {
       title: "Family",
-      body: "This template celebrates love, family, and togetherness. Update this note to reflect the event's confirmed arrangements.",
+      body: "Our celebration is all about togetherness. Families, elders, and children are warmly welcome at every event.",
     },
 
     {
       title: "Parking",
-      body: "Parking information is a placeholder. Add confirmed venue parking instructions before publishing.",
+      body: "Parking is available at the resort. Our team will guide you on arrival. Houseboat and boat transfers can be arranged on request.",
     },
 
     {
       title: "Photography",
-      body: "Please update this section with the event host's photography preferences and venue guidelines.",
+      body: "Please feel free to capture the joyful moments. During the muhurtham, we kindly request that guests avoid flash photography and keep the aisle clear for the rituals.",
     },
 
     {
       title: "Gifts",
-      body: "Your love and blessings are the greatest gifts. Replace this note if the hosts have other preferences.",
+      body: "Your love, blessings, and presence are the greatest gifts we could ask for.",
     },
   ],
 
@@ -175,9 +171,9 @@ export const wedding = {
   musicSrc: "",
 
   footer: {
-    signOff: "With Love, Rashmika & Vijay",
+    signOff: "With Love, Anjana & Rohan",
     thanks:
-      "Thank you for exploring this InviteCraft wedding invitation demo. Replace the sample details with verified event information before sharing it as a real invitation.",
+      "Thank you for being part of our story. We look forward to celebrating this beautiful new beginning with you and receiving your blessings.",
   },
 } as const;
 
