@@ -114,7 +114,7 @@ function Index() {
           <InvitationMessage />
 
           <ScratchReveal />
-          <GallerySection/>
+          {/* <GallerySection/> */}
 
           
 
